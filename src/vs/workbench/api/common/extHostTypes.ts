@@ -443,11 +443,11 @@ export class ResolvedAuthority {
 		if (typeof port !== 'number' || port === 0 || Math.round(port) !== port) {
 			throw illegalArgument('port');
 		}
-		if (typeof connectionToken !== 'undefined') {
-			if (typeof connectionToken !== 'string' || connectionToken.length === 0 || !/^[0-9A-Za-z\-]+$/.test(connectionToken)) {
-				throw illegalArgument('connectionToken');
-			}
-		}
+		// if (typeof connectionToken !== 'undefined') {
+		// 	if (typeof connectionToken !== 'string' || connectionToken.length === 0 || !/^[0-9A-Za-z\-]+$/.test(connectionToken)) {
+		// 		throw illegalArgument('connectionToken');
+		// 	}
+		// }
 		this.host = host;
 		this.port = Math.round(port);
 		this.connectionToken = connectionToken;
